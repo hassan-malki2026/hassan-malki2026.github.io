@@ -1,1 +1,690 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>تقرير جزر فرسان | لؤلؤة البحر الأحمر</title>
+  
+  <!-- خطوط عربية أنيقة -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Almarai', 'Segoe UI', Tahoma, sans-serif;
+      line-height: 1.75;
+      background: linear-gradient(145deg, #e9f3f0 0%, #d4e5e0 100%);
+      color: #1e2b2f;
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 10vh;
+      min-height: 620px;
+      background: linear-gradient(rgba(0, 61, 68, 0.55), rgba(0, 61, 68, 0.45)), 
+                  url('https://hassan-malki2026.github.io/images/farasan.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      padding: 2rem;
+      z-index: 2;
+    }
+
+.hero h1 {
+  font-size: 4.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  font-family: 'Readex Pro', 'Almarai', sans-serif;
+  color: #f4a261;
+  /* أضف أو غيّر هذا السطر للون الذي تفضله */
+}
+
+    .hero .subtitle {
+      font-size: 1.85rem;
+      font-weight: 400;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .hero .scroll-down {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1.5rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40%, 70% { transform: translateX(-50%) translateY(15px); }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3.5rem 3.5rem;
+      border-radius: 2.8rem;
+      box-shadow: 0 35px 70px rgba(0, 47, 55, 0.18);
+      border: 1px solid rgba(255,255,255,0.6);
+      position: relative;
+      top: -60px;
+      z-index: 10;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+      border-bottom: 5px solid #0a9396;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: #003d44;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      font-size: 1.55rem;
+      color: #fff;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a4b4d;
+      margin: 3rem 0 1.6rem;
+      padding-right: 1.4rem;
+      border-right: 8px solid #f4a261;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: linear-gradient(to left, #f6fbfa, transparent);
+    }
+
+    h2::before {
+      content: "✦";
+      color: #f4a261;
+      font-size: 1.6rem;
+    }
+
+    .grid-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #fafefe 0%, #f1f9f8 100%);
+      padding: 2rem 1.5rem;
+      border-radius: 1.8rem;
+      text-align: center;
+      box-shadow: 0 15px 35px -15px rgba(0, 59, 64, 0.25);
+      border: 1px solid #bde4e0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 45px -15px rgba(0, 95, 115, 0.35);
+      border-color: #0a9396;
+    }
+
+    .card i {
+      font-size: 2.2rem;
+      color: #0a9396;
+      margin-bottom: 1rem;
+    }
+
+    .card strong {
+      display: block;
+      color: #004d51;
+      font-size: 1.25rem;
+      margin-bottom: 0.7rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      border-radius: 1.4rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 70, 70, 0.12);
+    }
+
+    th {
+      background: linear-gradient(135deg, #0a6e73, #084b4e);
+      color: white;
+      font-weight: 700;
+      padding: 1.1rem 1rem;
+      text-align: center;
+    }
+
+    td {
+      padding: 1rem 1.2rem;
+      text-align: right;
+      border-bottom: 1px solid #d9ece9;
+      color: #18393e;
+      font-weight: 500;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background-color: #e0f5f2;
+    }
+
+    ul {
+      list-style: none;
+      padding-right: 0.8rem;
+    }
+
+    li {
+      margin-bottom: 1.1rem;
+      padding-right: 2.4rem;
+      position: relative;
+      font-size: 1.1rem;
+      color: #1f4347;
+    }
+
+    li::before {
+      content: "●";
+      color: #f4a261;
+      position: absolute;
+      right: 0;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, #f4a261, #f48c46);
+      color: white;
+      padding: 0.25rem 0.9rem;
+      border-radius: 25px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(244, 162, 97, 0.4);
+    }
+
+    .image-section {
+      margin: 2.5rem 0;
+      border-radius: 1.8rem;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 47, 55, 0.15);
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-section:hover img {
+      transform: scale(1.04);
+    }
+
+    .image-caption {
+      background: #f8faf9;
+      padding: 1rem 1.5rem;
+      font-size: 0.98rem;
+      color: #2e5a5f;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 1.4rem;
+      box-shadow: 0 12px 25px rgba(0, 59, 64, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 95, 115, 0.3);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2.2rem;
+      background: #f3faf9;
+      border-radius: 1.6rem;
+      text-align: center;
+      color: #2e5a5f;
+      font-size: 0.98rem;
+      border-top: 3px dashed #94c5c0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      .container { padding: 2rem 1.5rem; top: -40px; }
+      .grid-info { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>تقرير مفصل عن جزر فرسان</h1>
+      <p class="subtitle">لؤلؤة البحر الأحمر</p>
+      <p style="max-width: 520px; margin: 0 auto; opacity: 0.9; font-size: 1.15rem;">
+        اكتشف جمال وتاريخ جزر فرسان، محمية طبيعية فريدة في البحر الأحمر.
+      </p>
+    </div>
+    <div class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- بطاقة القائد المنقولة إلى أعلى المحتوى -->
+    <div class="leader-card">
+    <div class="leader-image-container">
+        <img src="https://hassan-malki2026.github.io/images/IMG-20260508-WA0162.jpg" 
+             alt="حسن المالكي - قائد فريق العمل" 
+             class="leader-img">
+        <div class="verified-badge">✓</div>
+    </div>
+    
+    <div class="leader-info">
+        <h3>حسن المالكي</h3>
+        <p class="role">✨ قائد فريق العمل</p>
+        
+        <p class="bio">
+            باحث ومهتم بتوثيق المعالم السياحية والتاريخية لجزيرة فرسان. 
+            <strong>مصمم ومطور هذه الصفحة</strong>، يسعى لإبراز جمال وتاريخ المنطقة للعالم بأسلوب احترافي ومتميز.
+        </p>
+        
+        <button class="contact-btn" onclick="window.location.href='mailto:your@email.com'">
+            <span>📩</span> تواصل معي
+        </button>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap');
+
+    :root {
+        --primary: #0077be;
+        --primary-dark: #005a8c;
+        --accent: #00b4d8;
+        --text-dark: #012a3f;
+        --text-light: #334b5e;
+    }
+
+    .leader-card {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, transparent 0%, #f0f9ff 100%);
+        border-radius: 32px;
+        padding: 36px 38px;
+        margin: 30px 0;
+        box-shadow: 
+            0 30px 60px -15px rgb(0 119 190 / 0.15),
+            0 10px 25px -5px rgb(0 119 190 / 0.08),
+            inset 0 2px 0 rgba(255,255,255,0.95);
+        border: 1px solid rgba(0, 119, 190, 0.18);
+        gap: 34px;
+        font-family: 'Cairo', 'Tajawal', sans-serif;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        direction: rtl;
+    }
+
+    .leader-card::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(0, 180, 216, 0.14) 0%, transparent 65%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .leader-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 
+            0 40px 80px -12px rgb(0 119 190 / 0.22),
+            0 15px 35px -8px rgb(0 119 190 / 0.15);
+    }
+
+    /* صورة القائد */
+    .leader-image-container {
+        flex: 0 0 165px;
+        height: 165px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        border: 7px solid #ffffff;
+        box-shadow: 
+            0 12px 35px rgba(0, 105, 165, 0.28),
+            0 0 0 10px rgba(0, 160, 210, 0.2);
+        transition: all 0.5s ease;
+    }
+
+    .leader-card:hover .leader-image-container {
+        transform: scale(1.05) rotate(3deg);
+        box-shadow: 
+            0 18px 45px rgba(0, 130, 200, 0.38),
+            0 0 0 12px rgba(0, 180, 220, 0.25);
+    }
+
+    .leader-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .verified-badge {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: linear-gradient(135deg, #00b4d8, #0077be);
+        color: white;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        font-weight: 900;
+        border: 4px solid white;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+    }
+
+    /* المعلومات */
+    .leader-info {
+        flex: 1;
+        min-width: 270px;
+        z-index: 2;
+    }
+
+    .leader-info h3 {
+        margin: 0 0 6px 0;
+        font-size: 2.05rem;
+        font-weight: 900;
+        color: var(--text-dark);
+        background: linear-gradient(135deg, #012a3f, #03557a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.6px;
+    }
+
+    .role {
+        color: var(--primary);
+        font-weight: 700;
+        margin: 0 0 16px 0;
+        font-size: 0.97rem;
+        letter-spacing: 1.3px;
+        background: rgba(0, 180, 216, 0.09);
+        padding: 7px 18px;
+        border-radius: 30px;
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .bio {
+        color: var(--text-light);
+        line-height: 1.78;
+        font-size: 1.04rem;
+        margin-bottom: 22px;
+        font-weight: 500;
+    }
+
+    .bio strong {
+        color: var(--primary);
+    }
+
+    /* زر التواصل */
+    .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        padding: 14px 34px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.02rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 12px 28px rgba(0, 119, 190, 0.32);
+        letter-spacing: 0.5px;
+    }
+
+    .contact-btn:hover {
+        background: linear-gradient(135deg, var(--primary-dark), #008bb3);
+        transform: translateY(-4px);
+        box-shadow: 0 18px 35px rgba(0, 119, 190, 0.42);
+        gap: 15px;
+    }
+
+    /* الاستجابة للجوال */
+    @media (max-width: 680px) {
+        .leader-card {
+            padding: 30px 26px;
+            gap: 26px;
+            text-align: center;
+            flex-direction: column;
+        }
+        
+        .leader-image-container {
+            margin: 0 auto;
+            flex: 0 0 155px;
+            height: 155px;
+        }
+        
+        .leader-info h3 {
+            font-size: 1.85rem;
+        }
+    }
+</style>
+
+    <!-- نظرة عامة -->
+    <h2><i class="fas fa-globe"></i> نظرة عامة على الموقع</h2>
+    <div class="grid-info">
+      <div class="card">
+        <i class="fas fa-map-marker-alt"></i>
+        <strong>الموقع</strong>
+        <span>جازان، المملكة العربية السعودية (40 كم عن الشاطئ)</span>
+      </div>
+      <div class="card">
+        <i class="fas fa-expand-arrows-alt"></i>
+        <strong>المساحة الإجمالية</strong>
+        <span>1,050 كم²</span>
+      </div>
+      <div class="card">
+        <i class="fas fa-island"></i>
+        <strong>عدد الجزر</strong>
+        <span>حوالي 150 جزيرة (3 منها مأهولة)</span>
+      </div>
+      <div class="card">
+        <i class="fas fa-water"></i>
+        <strong>طول الساحل</strong>
+        <span>300 كم</span>
+      </div>
+    </div>
+
+    <!-- الجزر الرئيسية -->
+    <h2><i class="fas fa-island"></i> الجزر الرئيسية المأهولة</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>اسم الجزيرة</th>
+          <th>الحالة</th>
+          <th>أبرز المعالم</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>فرسان الكبرى</strong></td>
+          <td>مأهولة (المركز الإداري)</td>
+          <td>المواقع التراثية والمركز الإداري</td>
+        </tr>
+        <tr>
+          <td><strong>فرسان الصغرى (السقيد)</strong></td>
+          <td>مأهولة</td>
+          <td>يفصلها عن الكبرى قناة مائية بطول 300 متر</td>
+        </tr>
+        <tr>
+          <td><strong>قمة</strong></td>
+          <td>مأهولة بشكل محدود</td>
+          <td>مبنى "بيت الجرمل" الألماني</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- التسلسل التاريخي -->
+    <h2><i class="fas fa-history"></i> التسلسل التاريخي</h2>
+    <ul>
+      <li><strong>6,000 ق.م:</strong> استيطان بشري موثق منذ عصور ما قبل التاريخ.</li>
+      <li><strong>القرن 1-3 م:</strong> تواجد عسكري روماني (أكثر من 1,000 موقع أثري).</li>
+      <li><strong>عصر ما قبل الإسلام:</strong> نفوذ مملكة حمير ونقوش "المسند" في وادي مطر.</li>
+      <li><strong>1538م - 1926م:</strong> فترات حكم العثمانيين، الأدارسة، وصولاً إلى الانضمام للمملكة العربية السعودية.</li>
+    </ul>
+
+    <!-- المعالم الأثرية -->
+    <h2><i class="fas fa-landmark"></i> المعالم الأثرية البارزة</h2>
+    <div class="image-section">
+      <img src="https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/2f5363ab-88dd-4c93-a613-a37c0d3f4ba8.jpg" alt="القلعة العثمانية في جزر فرسان" style="border-radius: 1.4rem 1.4rem 0 0;">
+      <div class="image-caption">
+        <strong>القلعة العثمانية</strong> — شاهدة على التاريخ العثماني في المنطقة (القرن 16-19م)
+      </div>
+    </div>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>الموقع</th>
+          <th>العصر</th>
+          <th>الوصف</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>منزل الرفاعي</td>
+          <td>قبل 100 عام</td>
+          <td>بناه تاجر اللؤلؤ أحمد الرفاعي؛ تحفة معمارية تقليدية.</td>
+        </tr>
+        <tr>
+          <td>مسجد النجدي</td>
+          <td>1347 هـ</td>
+          <td>بناه إبراهيم التميمي؛ يشتهر بزخارف إسلامية نادرة.</td>
+        </tr>
+        <tr>
+          <td>القلعة العثمانية</td>
+          <td>القرن 16-19</td>
+          <td>تقع على تلة مرتفعة شمال البلدة.</td>
+        </tr>
+        <tr>
+          <td>وادي مطر</td>
+          <td>ما قبل الإسلام</td>
+          <td>يحتوى على نقوش حميرية قديمة.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- الطبيعة والبيئة -->
+    <h2><i class="fas fa-leaf"></i> الطبيعة والبيئة</h2>
+    <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
+      تُعد جزر فرسان <span class="highlight">محمية طبيعية منذ عام 1996</span> وأول محمية سعودية ضمن برنامج اليونسكو للإنسان والمحيط الحيوي.
+    </p>
+
+    <div class="image-section" style="margin-bottom: 2rem;">
+      <img src="https://assets-news.asharq.com/images/articles/original/c946d330-4a61-465b-82f2-98d11c50b136.jpg" alt="غابات المانغروف في جزر فرسان" style="border-radius: 1.4rem 1.4rem 0 0;">
+      <div class="image-caption">
+        غابات المانغروف (القندل) الشاسعة — رئة الجزر الخضراء
+      </div>
+    </div>
+
+    <ul>
+      <li><strong>الغزال الفرساني:</strong> موطن لأكبر تجمع من هذه الفصيلة المستوطنة في العالم.</li>
+      <li><strong>الحياة البحرية:</strong> شعاب مرجانية بكر وأكثر من 200 نوع من الأسماك.</li>
+      <li><strong>الغابات:</strong> غابات المانغروف الشاسعة في شمال الجزيرة.</li>
+      <li><strong>الطيور:</strong> صقر الغروب والبجع العربي وأنواع نادرة أخرى.</li>
+    </ul>
+
+    <div class="image-section">
+      <img src="https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/c6755527-84bf-438b-88c1-226091988d30.jpg" alt="الغزال الفرساني" style="border-radius: 1.4rem 1.4rem 0 0;">
+      <div class="image-caption">
+        الغزال الفرساني — رمز الحياة البرية الفريدة في الجزر
+      </div>
+    </div>
+
+    <!-- الوصول والسياحة -->
+    <h2><i class="fas fa-ship"></i> الوصول والسياحة</h2>
+    <ul>
+      <li><strong>العبارة الرسمية:</strong> مجانية وتنطلق 3 مرات يومياً من ميناء جازان (90 دقيقة).</li>
+      <li><strong>القوارب الخاصة:</strong> متوفرة عند الطلب وتستغرق حوالي ساعة.</li>
+      <li><strong>الأنشطة السياحية:</strong> الغوص، مراقبة الحياة البرية، والجولات التاريخية.</li>
+    </ul>
+
+    <div class="image-section">
+      <img src="https://boardingtourism.com/wp-content/uploads/2025/06/%D8%A8%D9%85%D8%A7%D8%B0%D8%A7-%D8%AA%D8%B4%D8%AA%D9%87%D8%B1-%D8%AC%D8%B2%D8%B1-%D9%81%D8%B1%D8%B3%D8%A7%D9%86.webp" alt="شواطئ جزر فرسان الفيروزية" style="border-radius: 1.4rem 1.4rem 0 0;">
+      <div class="image-caption">
+        شواطئ جزر فرسان البكر بمياهها الفيروزية الصافية
+      </div>
+    </div>
+
+    <!-- معرض الصور -->
+    <h2><i class="fas fa-images"></i> معرض الصور</h2>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/1005/600/400" alt="منظر جوي لجزر فرسان">
+      <img src="https://picsum.photos/id/1074/600/400" alt="الشعاب المرجانية في جزر فرسان">
+      <img src="https://assets-news.asharq.com/images/articles/original/c946d330-4a61-465b-82f2-98d11c50b136.jpg" alt="غابات المانغروف">
+      <img src="https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/2f5363ab-88dd-4c93-a613-a37c0d3f4ba8.jpg" alt="العمارة التقليدية في فرسان">
+    </div>
+
+    <footer>
+      <p><strong>المصادر:</strong> هيئة التراث السعودية • ويكيبيديا • وكالة الأنباء السعودية (SPA) • Visit Saudi</p>
+      <p style="margin-top: 0.8rem; font-size: 0.9rem;">© 2026 — تقرير سياحي وثقافي عن جزر فرسان</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

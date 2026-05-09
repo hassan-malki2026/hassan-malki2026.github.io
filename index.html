@@ -2,148 +2,76 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
-    <title>مرحباً بك في فرسان | الواجهة الرئيسية</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Readex+Pro:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البوابة السياحية | جزر فرسان</title>
     <style>
-        :root {
-            --primary-color: #0077be;
-            --accent-color: #f4a261;
-            --bg-dark: #003d44;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Almarai', sans-serif;
-            background-color: #f0f7f9;
-            overflow: hidden; /* لمنع التمرير في الصفحة الرئيسية لجعلها تبدو كلوحة فنية */
-        }
-
-        .main-wrapper {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
             height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                        url('https://vid.alarabiya.net/images/2026/03/16/250e3f7c-6989-4abc-ad7d-b20761224c0c/250e3f7c-6989-4abc-ad7d-b20761224c0c_16x9_1200x676.jpeg') center/cover no-repeat;
-            position: relative;
+            align-items: center;
+            margin: 0;
         }
 
-        /* تأثير الأمواج في الأسفل */
-        .waves {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 15vh;
-            min-height: 100px;
-            max-height: 150px;
-        }
-
-        .content-box {
-            text-align: center;
-            color: white;
-            z-index: 10;
-            background: rgba(0, 61, 68, 0.7);
+        .welcome-card {
+            background: white;
             padding: 3rem;
-            border-radius: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-            max-width: 700px;
-            animation: fadeInUp 1.2s ease-out;
+            border-radius: 2rem;
+            box-shadow: 0 20px 50px rgba(0, 121, 107, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
         }
 
         h1 {
-            font-family: 'Readex Pro', sans-serif;
-            font-size: 3.5rem;
+            color: #00796b;
             margin-bottom: 1rem;
-            color: var(--accent-color);
+            font-size: 1.8rem;
         }
 
         p {
-            font-size: 1.4rem;
-            margin-bottom: 2.5rem;
+            color: #555;
+            margin-bottom: 2rem;
             line-height: 1.6;
-            opacity: 0.9;
         }
 
-        .btn-enter {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            padding: 18px 45px;
-            background: var(--accent-color);
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(244, 162, 97, 0.4);
-        }
-
-        .btn-enter:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: #e76f51;
-            box-shadow: 0 15px 30px rgba(231, 111, 81, 0.5);
-        }
-
-        .btn-enter i {
-            transition: transform 0.3s ease;
-        }
-
-        .btn-enter:hover i {
-            transform: translateX(-10px); /* تحريك السهم لليمين في اتجاه القراءة العربي */
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* توقيع المطور في الزاوية */
-        .dev-credit {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
+        .btn-report {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #00897b, #004d40);
             color: white;
-            font-size: 0.9rem;
-            z-index: 20;
-            background: rgba(0,0,0,0.4);
-            padding: 5px 15px;
-            border-radius: 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 77, 64, 0.3);
+        }
+
+        .btn-report:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 77, 64, 0.4);
+            background: linear-gradient(135deg, #00a693, #00695c);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <div class="content-box">
-            <i class="fas fa-anchor" style="font-size: 3rem; color: #fff; margin-bottom: 1rem; opacity: 0.8;"></i>
-            <h1>مرحباً بك في أرخبيل فرسان</h1>
-            <p>رحلة استكشافية إلى أعماق التاريخ وجمال الطبيعة البكر في قلب البحر الأحمر.</p>
-            
-            <a href="Report-farasan.html" class="btn-enter">
-                استعرض التقرير الكامل
-                <i class="fas fa-arrow-left"></i>
-            </a>
-        </div>
-
-        <div class="dev-credit">
-            بواسطة المطور: <strong>حسن المالكي</strong>
-        </div>
+    <div class="welcome-card">
+        <span class="icon">🏝️</span>
+        <h1>مرحباً بك</h1>
+        <p>استكشف لؤلؤة البحر الأحمر وتعرف على تاريخ ومعالم جزر فرسان الساحرة.</p>
+        
+        <a href="Report-farasan.html" class="btn-report">دخول التقرير المفصل</a>
     </div>
 
 </body>
 </html>
-
